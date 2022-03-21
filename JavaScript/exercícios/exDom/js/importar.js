@@ -1,21 +1,19 @@
-const botaoImportar = document.querySelector('[data-import-button]')
+const botaoImportar = document.querySelector('[data-add-button]')
 
-botaoImportar.addEventListener('click', function() {
-
+botaoImportar.addEventListener('click', function(){
     const xhr = new XMLHttpRequest()
     xhr.open('GET', 'https://api-pacientes.herokuapp.com/pacientes')
+
     xhr.addEventListener('load', function(){
-
-        /* Antes de converter para arquivo JSON */
         const resposta = xhr.responseText
-        console.log(resposta, typeof resposta);
+        console.log(resposta, typeof resposta)
 
-        /* Depois de converter para arquivo JSON */
         const pacienteAdd = JSON.parse(resposta)
-        console.log(pacienteAdd, typeof pacienteAdd);
-        pacienteAdd.forEach(function(pacientes)){
-            
-        }
+        console.log(pacienteAdd, typeof pacienteAdd)
+        
+        pacienteAdd.forEach(function(paciente) {
+            montaTr(paciente)
+        })
     })
     xhr.send()
 })

@@ -1,4 +1,4 @@
-const titulo = document.querySelector('[data-title]')
+/*const titulo = document.querySelector('[data-title]')
 titulo.textContent = 'Nutrição DevTarde'
 
 const pacientes = document.querySelectorAll('.paciente')
@@ -45,20 +45,14 @@ botaoAdicionar.addEventListener('click', function (event) {
     let pesoValido = true
     let alturaValida = true
 
-  
-
-    if ((pesoForm < 0 || pesoForm > 300) && (alturaForm < 0 || alturaForm > 3)) {
-        pesoValido = false
-        alturaValida = false
-        alertaErro.textContent = 'Peso e altura inválida'
-        return
-    } else if (pesoForm < 0 || pesoForm > 300) {
+    if (pesoForm < 0 || pesoForm > 300) {
         pesoValido = false
         alertaErro.textContent = 'Peso Inválido'
         return
-    } else if (alturaForm < 0 || alturaForm > 3) {
+    }
+    if (alturaForm < 0 || alturaForm > 3) {
         alturaValida = false
-        alertaErro.textContent = 'Altura Inválida'
+        alertaErro.textContent = 'Altura inválida'
         return
     }
     if (pesoValido && alturaValida) {
@@ -86,3 +80,4 @@ botaoAdicionar.addEventListener('click', function (event) {
         pacienteTr.appendChild(imcTd)
     }
     })
+*/
