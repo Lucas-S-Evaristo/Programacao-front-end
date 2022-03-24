@@ -1,0 +1,22 @@
+#form {
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2em;
+    background-image: linear-gradient(rgba(46, 196, 181, 0.205), rgba(0, 128, 0, 0.233));
+    padding: 2em;
+    border-radius: 50px;
+}
+
+fieldset {
+    border-color: black;
+    color: #000;
+}
+
+form input {
+    color: #000;
+}
+
+a:disabled {
+    color: blue;
+}

@@ -67,3 +67,7 @@ body{
 .feito{
     text-decoration: line-through;
 }
+
+.divStyle {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 10% 100%, 0% 38%);
+}
