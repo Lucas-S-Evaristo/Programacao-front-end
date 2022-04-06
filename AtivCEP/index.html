@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- DIV principal -->
+    <div class="container">
+        <form action="" method="get">
+            <!-- Nome -->
+            <div class="frm-row">
+                <label for="">Nome</label>
+                <input type="text">
+            </div>
+            
+            <!-- Data de Nascimento -->
+            <div class="frm-row">
+                <label for="">Data de Nasc.</label>
+                <input type="date">
+            </div>
+
+            <!-- CEP -->
+            <div class="frm-row">
+                <label for="cep">CEP</label>
+                <input type="text" class="form-control" id="cep" maxlength="9">
+                <small>00000-000</small>
+            </div>
+
+            <!-- Logradouro (Nome da Rua) -->
+            <div class="frm-row">
+                <label for="logradouro">Logradouro</label> <!-- Nome da Rua -->
+                <input type="text" class="form-control" id="logradouro">
+                <small>Rua.</small>
+            </div>
+
+            <!-- Bairro -->
+            <div class="frm-row">
+                <label for="bairro">Bairro</label>
+                <input type="text" class="form-control" id="bairro">
+                <small>Bairro</small>
+            </div>
+
+            <!-- Cidade -->
+            <div class="frm-row">
+                <label for="localidade">Localidade</label>
+                <input type="text" id="localidade">
+                <small>Cidade</small>
+            </div>
+
+            <!-- Estado -->
+            <div class="frm-row">
+                <label for="uf">UF</label>
+                <input type="text" class="form-control" id="uf">
+                <small>Estado</small>
+            </div>
+            
+        </form>
+    </div>
+    <script src="js/logica.js"></script>
+</body>
+
+</html>
