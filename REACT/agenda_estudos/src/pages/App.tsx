@@ -1,19 +1,35 @@
 import React, { useState } from 'react';
-import Botao from '../components/botao';
 import { Cronometro } from '../components/Cronometro';
 import Formulario from '../components/formulario';
 import Lista from '../components/lista';
+import { ITarefas } from '../types/Tarefas';
 import style from './App.module.scss'
 
+
 function App() {
-  const [tarefas, setTarefas] = useState([{ tarefa: "JavaScript", tempo: "01:30:00" }, { tarefa: "React", tempo: "02:00:00" }, { tarefa: "Angular", tempo: "01:20:00" }])
+  const [tarefas, setTarefas] = useState<ITarefas[]>([]) 
+  const [selecionado, setSelecionado] = useState<ITarefas>()
+
+  function selecionaTarefa(tarefaSelecionada: ITarefas){
+    setSelecionado(tarefaSelecionada);
+    setTarefas(tarefasAnteriores => tarefasAnteriores.map( tarefa =>({
+      ...tarefa,
+      selecionado: tarefa.id === tarefaSelecionada.id ? true : false 
+    })))
+  }
+
   return (
     <div className={style.AppStyle}>
-      <Formulario/>
-      <Lista tarefas={tarefas} />
-      <Cronometro />
+      <Formulario setTarefas={setTarefas}/>
+      <Lista 
+        tarefas={tarefas}
+        selecionaTarefa={selecionaTarefa}
+      />
+      <Cronometro
+        selecionado={selecionado} // verifica se uma atividade foi selecionada ou não
+      />
     </div>
   );
 }
 
-export default App; // para deixar esse componente acessível por outros arquivos
+export default App;
